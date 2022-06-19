@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Rotana Career Jobs and Locations</title>
+    <!-- Stylesheets from Bootstrap -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+  </head>
+  <body>
+    <h3 style="text-align:center">Rotana Career Jobs and Locations</h3>
+    <!-- Table containing data -->
+    <table class="table table-dark">
+      <thead>
+          <tr style="text-align: center">
+              <th></th>
+              <th scope="col">Job Title</th>
+              <th scope="col">Location</th>
+          </tr>
+      </thead>
+      <tbody>
+        <!-- Jinja loop for iterating over every element in dictionary in myList -->  
+        {% for entry in myList %}
+          <tr class="align-middle" style="text-align: center">
+            <td> {{entry.number}} </td>  
+            <td> {{entry.title}} </td>
+            <td> 
+              <div id="map" style="width: 400px; height: 150px; text-align: center">
+                <!-- iframe for embedding Google Maps map on web app -->
+                <iframe src="https://www.google.com/maps/embed/v1/place?q={{entry.profile}} {{entry.country }}&key=AIzaSyCEUu0RXSJNDyuFw9RG8NatT2p_OCAXo7g"> </iframe>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
