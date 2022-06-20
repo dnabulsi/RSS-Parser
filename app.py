@@ -19,7 +19,7 @@ def index():
     pos = 1
 
     # Loop for looking through all responses
-    for entry in parserResponse.entries[:10]:
+    for entry in parserResponse.entries:
         
         # Turn string enty["profile"] into a list, store in responseList
         responseList = list(entry["profile"])
