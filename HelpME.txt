@@ -2,14 +2,14 @@ How to run my webpage:
  1. Open 'https://github.com/dnabulsi/RSS-Parser'.
  2. Select the green button 'Code', then 'Download ZIP'.
  3. Extract the .zip file wherever you see fit on your computer.
- 4. Open the file you've just extracted through VS Code, by selecting 'File' -> 'Open Workspace from File...'.
+ 4. Open the folder you've just extracted through VS Code, by selecting 'File' -> 'Open Folder...'.
  5. Open a new terminal in VS Code, by selecting 'Terminal' -> 'New Terminal'.
  6. Move to your file's directory via the terminal, using `ls` to check where you are, then `cd` to move to the directory you want. 
-    When you enter `ls` and see the files '__pycache__', 'app.py', 'HelpME.txt', 'requirements.txt', and 'templates', you are in the correct directory.
+    When you enter `ls` and see the files 'HelpME.txt', '__pycache__', 'app.py', 'requirements.txt', and 'templates', you are in the correct directory.
  7. Make sure to download Flask and feedparser per 'requirements.txt', by entering `pip install Flask` and `pip install feedparser` in the terminal window.
  8. Enter `flask run` in the terminal window.
  9. Open the URL link (most probably looks like 'http://127.0.0.1:5000') to view the locally hosted web page!
 10. When you are finished, use CTRL + C in the terminal window to end the web page program.
 
-If the number of lines is too big and the webpage is taking too long to load, go to 'app.py' and edit line 22 to `for entry in parserResponse.entries[:X]:`
-where X is the amount of lines you want to be visible on the page. Thank you! :)
+If the number of jobs is too big and the webpage is taking too long to load, go to 'app.py' and edit line 22 to `for entry in parserResponse.entries[:X]:`
+where X is the amount of jobs and maps you want to be visible on the page. Thank you! :)
